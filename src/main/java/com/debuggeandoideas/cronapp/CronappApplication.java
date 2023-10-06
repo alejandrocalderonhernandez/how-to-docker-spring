@@ -9,7 +9,6 @@ import org.springframework.scheduling.annotation.Scheduled;
 @EnableScheduling
 public class CronappApplication {
 
-	Long times = 0L;
 
 	public static void main(String[] args) {
 		SpringApplication.run(CronappApplication.class, args);
@@ -17,7 +16,7 @@ public class CronappApplication {
 
 	@Scheduled(fixedRate = 2000)
 	public void schedule() {
-		System.out.println("Execute task task every 2 seconds " + times++);
+		MyHelper.times();
 	}
 
 

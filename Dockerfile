@@ -6,6 +6,8 @@ COPY pom.xml .
 
 COPY src ./src
 
+RUN mvn test
+
 RUN  mvn package -DskipTests
 
 FROM openjdk:17.0-jdk-slim
